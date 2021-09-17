@@ -25,17 +25,6 @@ pipeline {
       }
     }
 
-    stage('Confirmacion Manual de la Prueba Linux') {
-      steps {
-        echo 'Aguardando la confirmacion Manual'
-        input 'La prueba de Linux resulto Ok?'
-        timestamps() {
-          echo 'Se recibio la confirmacion manual'
-        }
-
-      }
-    }
-
     stage('Despliegue en Produccion') {
       steps {
         echo 'Desplegando en Produccion'
